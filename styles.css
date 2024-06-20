@@ -6,12 +6,23 @@ body {
     background-color: #1E1E1E;
 }
 
+.container-fluid{
+    height: 100vh;
+}
+
+.row{
+    border: red solid 3px;
+    height: 100vh;
+}
+
+/* nav bar */
 .navbar {
     background-color: #D9D9D9;
     border-radius: 20px;
     display: flex;
     justify-content: center;
     min-width: 400px;
+    height: 7vh;
 }
 
 .navbar-form{
@@ -19,6 +30,28 @@ body {
     width: 90%;
     justify-content: space-between;
 }
+
+.search-form{
+    width: 50%;
+    height: 5vh;
+}
+.search-bar{
+    border-radius: 20px;
+}
+
+.search-submit{
+    border-radius: 10px;
+    width: 5vw;
+}
+
+/* container of folders and email*/
+/* .folders-email{
+    border: red solid 3px;
+    height: 50vh;
+
+} */
+
+/* folders */
 .folders {
     background-color: #B5B5B5;
     border-radius: 10px;
@@ -26,11 +59,13 @@ body {
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    height: 20vh;
+    min-height: 20%;
     min-width: 375px;
+    border: 3px red solid;
+
 }
 .compose-button{
-    width: 40%;
+    width: 200px;
     border-radius: 20px;
     border: #d9d9d9 3px solid;
     display: flex;
@@ -59,19 +94,22 @@ body {
     font-weight: 500;
 }
 
+/* email */
 .email {
-    height: 30vh;
+    min-height: 30%;
     border-radius: 20px 20px 0px 0px;
     background-color: #999999;
     min-width: 375px;
     display: flex;
     justify-content: center;
     align-items: center;
+    border: 3px red solid;
 }
 
 .email-list{
     display: flex;
     justify-content: center;
+    align-self: flex-start;
 }
 
 .nav-item{
@@ -86,29 +124,41 @@ body {
 .nav-link{
     display: flex;
     justify-content: space-between;
-    /* border: 3px solid red; */
     height: 80px;
 }
 
 .subject{
-    /* border: red solid 3px; */
     color: black;
 }
 .date{
     color: #525252;
 }
-
+/* messages */
 .messages {
-    height: 40vh;
+    min-height: 40vh;
     background-color: #F0F0F0;
     border-radius: 10px 10px 0px 0px;
-    min-width: 400px;
+    /* min-width: 400px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    border: 3px solid red;
+    justify-content: center; */
+    border: 3px red solid;
 }
+/* .message-form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
+} */
+
+.dot{
+    width: 50px;
+    height: 50px;
+    background-color: #525252;
+    border-radius: 50%;
+    display: inline-block;
+    border: #d9d9d9 3px solid;
+}
 label{
     font-size: medium;
     color: #525252;
@@ -119,4 +169,14 @@ label{
     display: flex;
     justify-content: center;
     align-self: flex-end;
+    border: #F0F0F0 3px solid;
+    background-color: #4E4CB5;
+}
+
+.send-btn:hover{
+    background-color: #281a5b;
+}
+
+.modal-content{
+    background-color: #F0F0F0;
 }

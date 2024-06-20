@@ -8,35 +8,33 @@
     <title>Bootstrap project by Thao Huynh</title>
 </head>
 <body>
-    <div class="container">
-        <div class="container-fluid">
-            <div class="row">
-                <!-- nav bar -->
-                <div class="col-12 navbar">
+    <div class="container-fluid">
+        <div class="row">
+            <!-- nav bar -->
+            <div class="col-12 navbar">
                     <div class="navbar-form">
-                    <h2>Gmail</h2>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">></button>
+                    <h2>Ghmail</h2>
+                    <form class="d-flex search-form" role="search">
+                        <input class="form-control me-2 search-bar" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-primary search-submit" type="submit">></button>
                       </form>
                     </div>
-                </div>
-                <!-- folders and emails -->
-                <div class="col-12 folders-email">
-                    <!-- folders -->
-                    <div class="col-12 folders">
-                        <div class="inbox">
-                            <button type="button" class="compose-button">Compose</button>
-                            <p><a href="#"class="folder-name">Inbox</a><br>
+            </div>
+                <!-- folders -->
+                <div class="col col-md-6 col-lg-3 folders">
+                    <div class="inbox">
+                        <!-- compose button, this will open a modal -->
+                        <button type="button" class="compose-button" data-bs-toggle="modal" data-bs-target="#compose-modal">Compose</button>
+                        <p><a href="#"class="folder-name">Inbox</a><br>
                                 <a href="#"class="folder-name">Draft</a><br>
                                 <a href="#"class="folder-name">Sent mail</a><br>
                                 <a href="#"class="folder-name">Spam</a><br>
                                 <a href="#"class="folder-name">Trash</a>
-                         </p>
-                        </div>
+                     </p>
                     </div>
-                    <!-- emails -->
-                    <div class="col-12 email">
+                </div>
+                <!-- emails -->
+                <div class="col-12 col-md-6 col-lg-3 email">
                         <ul class="nav email-list" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <div class="nav-link active" id="email-mom-tab" data-bs-toggle="tab" data-bs-target="#email-mom" role="tab" type="button" aria-controls="email-mom" aria-selected="true">
@@ -58,22 +56,55 @@
                             </li>
                         </ul>
                 </div>
-    </div>
-                <!-- messages -->
-                <div class="col-12 messages">
+            <!-- messages -->
+            <div class="col-12 col-lg-6 messages">
+                    <div class="message-form">
+                            <span class="dot"></span>
                     <div class="tab-content">
                         <div class="tab-pane fade show active" id="email-mom" role="tabpanel" aria-labelledby="email-mom" tabindex="0">This is your mom, please pay your house bill!!!<br> Bye, xoxo</div>
                         <div class="tab-pane fade" id="email-college" role="tabpanel" aria-labelledby="email-college" tabindex="0">Hello, you are accepted to Goober college.<br> Make sure you pay your bills.</div>
-                        <div class="tab-pane fade" id="email-amazon" role="tabpanel" aria-labelledby="email-amazon" tabindex="0">Hello,<br>Unfortunately, your item you have purchased was lost during the shipping process.<br>Whoopsie!</div>
+                        <div class="tab-pane fade" id="email-amazon" role="tabpanel" aria-labelledby="email-amazon" tabindex="0">Hello,<br>Unfortunately, your item you have purchased was lost during the shipping process.<br>Whoops...</div>
                     </div>
                     <div class="form-floating">
-                        <textarea class="form-control" placeholder="Reply here" id="floatingTextarea" style="height:150px; max-height: 200px;"></textarea>
+                        <textarea class="form-control" placeholder="Reply here" id="floatingTextarea" style="max-height:150px;min-height: 100px;border-radius: 10px;"></textarea>
                         <label for="floatingTextarea">Replying...</label>
-                      </div>
+                      </div>                        
                       <button class="btn btn-primary rounded-pill send-btn" type="Submit">Send</button>
-                </div>
+                    </div>
             </div>
         </div>
+    </div>
+    <!-- Compose Modal -->
+    <div class="modal fade" id="compose-modal" tabindex="-1" aria-labelledby="compose-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Compose</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row mb-3">
+            <label for="your-email" class="col-sm-2 col-form-label">From:</label>
+            <div class="col-10">
+              <input type="email" class="form-control" id="your-email" placeholder="youraccount@gmail.com">
+            </div>
+          </div>
+        <div class="row mb-3">
+          <label for="other-email" class="col-sm-2 col-form-label">To:</label>
+          <div class="col-10">
+            <input type="email" class="form-control" id="other-email">
+          </div>
+        </div>
+      <div class="form-floating">
+        <textarea class="form-control" placeholder="Enter your message here" id="floatingTextarea2" style="height: 200px;border-radius: 10px;"></textarea>
+        <label for="floatingTextarea2">Text here...</label>
+      </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-primary rounded-pill send-btn">Send</button>
+          </div>
+        </div>
+      </div>
+    </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
