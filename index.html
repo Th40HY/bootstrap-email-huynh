@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container-fluid">
-        <div class="row">
+        <div class="row rol-cols-auto">
             <!-- nav bar -->
             <div class="col-12 navbar">
                     <div class="navbar-form">
@@ -21,7 +21,7 @@
                     </div>
             </div>
                 <!-- folders -->
-                <div class="col col-md-6 col-lg-3 folders">
+                <div class="col col-md-6 col-lg-2 folders">
                     <div class="inbox">
                         <!-- compose button, this will open a modal -->
                         <button type="button" class="compose-button" data-bs-toggle="modal" data-bs-target="#compose-modal">Compose</button>
@@ -57,20 +57,18 @@
                         </ul>
                 </div>
             <!-- messages -->
-            <div class="col-12 col-lg-6 messages">
-                    <div class="message-form">
-                            <span class="dot"></span>
-                    <div class="tab-content">
+            <div class="col messages">
+                <span class="dot"></span>
+                <div class="tab-content">
                         <div class="tab-pane fade show active" id="email-mom" role="tabpanel" aria-labelledby="email-mom" tabindex="0">This is your mom, please pay your house bill!!!<br> Bye, xoxo</div>
                         <div class="tab-pane fade" id="email-college" role="tabpanel" aria-labelledby="email-college" tabindex="0">Hello, you are accepted to Goober college.<br> Make sure you pay your bills.</div>
                         <div class="tab-pane fade" id="email-amazon" role="tabpanel" aria-labelledby="email-amazon" tabindex="0">Hello,<br>Unfortunately, your item you have purchased was lost during the shipping process.<br>Whoops...</div>
-                    </div>
-                    <div class="form-floating">
-                        <textarea class="form-control" placeholder="Reply here" id="floatingTextarea" style="max-height:150px;min-height: 100px;border-radius: 10px;"></textarea>
+                </div>
+                <div class="form-floating">
+                        <textarea class="form-control" placeholder="Reply here" id="floatingTextarea" style="max-height:20vh;min-height: 100px;border-radius: 10px;"></textarea>
                         <label for="floatingTextarea">Replying...</label>
-                      </div>                        
-                      <button class="btn btn-primary rounded-pill send-btn" type="Submit">Send</button>
-                    </div>
+                </div>                        
+                <button class="btn btn-primary rounded-pill send-btn" type="Submit">Send</button>
             </div>
         </div>
     </div>
